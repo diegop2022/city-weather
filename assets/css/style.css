@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(129, 48, 129);
+}
+
+.search {
+    padding: 0px 0px 0px 20px;
+    font-size: 35px;
+}
+
+.form {
+    padding: 0px 0px 0px 20px;
+}
+
+.city {
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.submit {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 13.2%
+}
+
+.submit:hover {
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.button {
+    padding: 5px 0px 0px 20px
+}
+
+.city-style {
+    border: 3px solid black;
+}
+
+.daysList {
+    justify-content: space-around;
+    display: flex;
+}
+
+.day1,
+.day2,
+.day3,
+.day4,
+.day5 {
+    background-color: grey;
+    padding: 20px;
+}
+
+.history-style {
+    list-style: none;
+    padding: 0px 0px 0px 85px;
+    font-size: 25px;
+}
