@@ -22,7 +22,7 @@ submit.addEventListener("click", function () {
 
     cityDateEl.appendChild(cityDateText)
 
-    fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + city.value + "&appid=" + key)
+    fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city.value + "&appid=" + key)
         .then(function (response) {
             return response.json()
         })
@@ -83,7 +83,7 @@ submit.addEventListener("click", function () {
                             day1Date = document.createElement("h1")
                             day1Date.textContent = "(" + month1 + "/" + (date1 + 1) + ")"
                             day1Temp = document.createElement("h1")
-                            day1Temp.textContent = data.list[0].main.temp
+                            day1Temp.textContent = ((data.list[0].main.temp - 273.15) * 9 / 5 + 32).toFixed(1)
                             day1Desc = document.createElement("h1")
                             day1Desc.textContent = data.list[0].weather[0].description
                             day1Div.appendChild(day1Date)
@@ -97,7 +97,7 @@ submit.addEventListener("click", function () {
                             day2Date = document.createElement("h1")
                             day2Date.textContent = "(" + month1 + "/" + (date1 + 2) + ")"
                             day2Temp = document.createElement("h1")
-                            day2Temp.textContent = data.list[8].main.temp
+                            day2Temp.textContent = ((data.list[8].main.temp - 273.15) * 9 / 5 + 32).toFixed(1)
                             day2Desc = document.createElement("h1")
                             day2Desc.textContent = data.list[8].weather[0].description
                             day2Div.appendChild(day2Date)
@@ -112,7 +112,7 @@ submit.addEventListener("click", function () {
                             day3Date = document.createElement("h1")
                             day3Date.textContent = "(" + month1 + "/" + (date1 + 3) + ")"
                             day3Temp = document.createElement("h1")
-                            day3Temp.textContent = data.list[16].main.temp
+                            day3Temp.textContent = ((data.list[16].main.temp - 273.15) * 9 / 5 + 32).toFixed(1)
                             day3Desc = document.createElement("h1")
                             day3Desc.textContent = data.list[16].weather[0].description
                             day3Div.appendChild(day3Date)
@@ -127,7 +127,7 @@ submit.addEventListener("click", function () {
                             day4Date = document.createElement("h1")
                             day4Date.textContent = "(" + month1 + "/" + (date1 + 4) + ")"
                             day4Temp = document.createElement("h1")
-                            day4Temp.textContent = data.list[24].main.temp
+                            day4Temp.textContent = ((data.list[24].main.temp - 273.15) * 9 / 5 + 32).toFixed(1)
                             day4Desc = document.createElement("h1")
                             day4Desc.textContent = data.list[24].weather[0].description
                             day4Div.appendChild(day4Date)
@@ -142,7 +142,7 @@ submit.addEventListener("click", function () {
                             day5Date = document.createElement("h1")
                             day5Date.textContent = "(" + month1 + "/" + (date1 + 5) + ")"
                             day5Temp = document.createElement("h1")
-                            day5Temp.textContent = data.list[32].main.temp
+                            day5Temp.textContent = ((data.list[32].main.temp - 273.15) * 9 / 5 + 32).toFixed(1)
                             day5Desc = document.createElement("h1")
                             day5Desc.textContent = data.list[32].weather[0].description
                             day5Div.appendChild(day5Date)
